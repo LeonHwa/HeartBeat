@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  HeartBeat
+//
+//  Created by Leon.Hwa on 17/2/24.
+//  Copyright © 2017年 Leon. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// 如果 pch 引入的类被  mm引用 会报NSObjCRuntime, NSZone出错
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import "UIView+tool.h"
+#import "UIImage+tool.h"
+#import "UILabel+FSHIghlightAnimationAdditions.h"
+
+
+#import "HeartBeatDataManager.h"
+#endif
+
+
+
+#define WIDTH   [UIScreen mainScreen].bounds.size.width
+#define HEIGH   [UIScreen mainScreen].bounds.size.height
+
+#define COLOR(r,g,b,a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define APP_COLOR COLOR(218, 78, 73, 1)
+#define BG_COLOR COLOR(240, 240, 240, 1)
+#endif /* PrefixHeader_pch */
